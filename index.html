@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn slick css file  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <!-- bootstrap link css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    <!-- EXTERNAL FILE CSS  -->
     <link rel="stylesheet" href="./CSS/style.css">
@@ -10,33 +14,472 @@
 </head>
 <body>
         <!-- start header  -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
+        <header class="header container">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top ">
+                <div class="container ">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <!-- Offcanvas Trigger Button -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active text-decoration-underline " aria-current="page" href="#">الرئيسية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">عن الشركة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الخدمات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تواصل معنا</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-5 info-lang">
+                        <div class="lang d-flex gap-1">
+                            <p class="mb-0 language-en">English</p>
+                            <div class="global">
+                                <img src="./img/globe.svg" alt="global">
+                            </div>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark border rounded px-4 py-1">تسجيل الدخول</a>
+                        </div>
+                    </div>
+                    <div class="logo-md">
+                        <img src="./img/logo-md.svg" alt="">
+                    </div>
+                    <div class="register-md">
+                        <a href="" class="text-decoration-none text-dark border rounded  px-4 py-1 ">تسجيل الدخول</a>
+                    </div>
+                </div>
+                    <!-- Offcanvas Content -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">القائمة</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-center flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-decoration-underline " aria-current="page" href="#">الرئيسية</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">عن الشركة</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">الخدمات</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">تواصل معنا</a>
+                                </li>
+                                
+                            </ul>
+                            <!-- Language and Login Options -->
+                            <div class="d-flex gap-5 mt-3 Language-and-Login-Options">
+                                <div class="lang d-flex gap-1">
+                                    <p class="mb-0 language-en">English</p>
+                                    <div class="global">
+                                        <img src="./img/globe.svg" alt="global">
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    <a href="#" class="text-decoration-none text-dark border rounded px-4 py-1">تسجيل الدخول</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- end header  -->
+        <!-- start hero section  -->
+        <section class="hero">
+            <div class="container">
+                <div class="content d-flex flex-column align-items-start justify-content-center  ">
+                    <p class="hero-title mb-0">نقف بجانبك بوعيٍ قانونيٍ راسخ</p>
+                    <h2 class="hero-subtitle">لنضمن لك حقوقك</h2>
+                    <a href="" class="text-decoration-none text-dark border rounded px-4 py-1 ">تواصل معنا الآن</a>
                 </div>
             </div>
-        </nav>
-        <!-- end header  -->
+            <div class="hero-info d-flex justify-content-around">
+                <div class="itrm1 item">
+                    <div>
+                        <img src="./img/profiles.svg" alt="">
+                    </div>
+                    <div class="info-nums">
+                        <p class="mb-0 num">٢٣٩١٩</p>
+                        <p class="mb-0 txt">طلب تنفيذ</p>
+                    </div>
+                </div>
+                <div class="itrm2 item">
+                    <div>
+                        <img src="./img/case-study.svg" alt="">
+                    </div>
+                    <div class="info-nums">
+                        <p class="mb-0 num"> ٣٢٣١</p>
+                        <p class="mb-0 txt">طلب تنفيذ</p>
+                    </div>
+                </div>
+                <div class="itrm3 item">
+                    <div>
+                        <img src="./img/customer-service.svg" alt="">
+                    </div>
+                    <div class="info-nums">
+                        <p class="mb-0 num"> ٢١١٤</p>
+                        <p class="mb-0 txt">طلب تنفيذ</p>
+                    </div>
+                </div>
+                <div class="itrm4 item">
+                    <div>
+                        <img src="./img/employee.svg" alt="">
+                    </div>
+                    <div class="info-nums">
+                        <p class="mb-0 num">١٥</p>
+                        <p class="mb-0 txt">طلب تنفيذ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section  -->
+        <!-- start section about  -->
+        <section class="about d-flex align-items-lg-end align-items-md-end  align-items-center justify-content-center   ">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between  gap-md-1 gap-lg-1
+                gap-0">
+                    <div class="container-about d-flex flex-column justify-content-between align-items-start ">
+                        <h2 class="container-title mb-0">عن الشركة</h2>
+                        <p class=" container-txt mb-0">
+                            شـركـة مـانـي للـمحــامـاة والاستشــارات القـانـونـيـة
+                            تُـعـد مـن الشركــات الـرائـدة فـي مـجـال الـقـانـون
+                            بـالـممـلكـة الـعربـيـة الـسعـــوديـة حـيـث يـضـــــــم فـريـقـنــــا
+                            نـخبـة مـن المحامين والمستشارين ذوي الخبرة الواسعة في مختلف التخصصات
+                            القانونية، ممـا يـمكـننـا مـن تقـديـم حـلـول قـانـونيـة متـكاملة بأعلى
+                            معايير الجودة والاحترافية. نلتزم بتلبية احتياجات عملائنا من الشركات
+                            الخاصة والقطاعات الحكومية، ونـفخر بسجـلنـا الـحافل بالنجاحات في إنجاز الأعمال
+                            القانونية بكفاءة واحتراف، مدعومين بفريق متخصص يسعى دائمًا لتحقيق أفضل النتائج
+                        </p>
+                        <a href="" class="text-decoration-none text-dark border rounded px-4 py-1    ">اكتشف المزيد عنّا</a>
+                    </div>
+                    <div class="container-img">
+                        <img src="./img/logo-about-sm.svg" alt="">
+                        <!-- <img src="./img/logo-about.svg" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section about  -->
+        <!-- start why are we  -->
+        <section class="why mt-5">
+            <div class="container">
+                <div class="content d-flex">
+                    <div class="spicial d-flex flex-lg-row flex-md-column-reverse ">
+                        <div class="container-img w-50 ms-4">
+                            <img class="w-100" src="./img/man-using-laptop-computer-with-statue-man-keyboard 1.svg" alt="">
+                        </div>
+                        <div class="container-info w-50">
+                            <h2 class="container-title">لماذا نحن</h2>
+                            <div class="d-flex flex-column">
+                                <h4>فريق قانوني استثنائي</h4>
+                                <p>نفـتخـر بـفريـق مـن المحـامـين والـمستشـاريـن القـانونيين ذوي الخبرة الواسعة والمتخصصة في مختلف المجالات، ملتزمين بتقـديـم حـلول قـانـونيـة مـدروسـة تـحمـي مـصالح عملائنا وفق أعـلى مـعايير الـمهنية والـدقـة.
+                                </p>
+                            </div>
+                            <din class="d-flex flex-column">
+                                <h4>التزام قانوني راسخ</h4>
+                                <p>نـواكـب أحدث الـتشـريعات الـصادرة عن وزارة الـعـدل لـضـمـان اسـتشــارات قــانـونـيــة مـحـدثــة وفـعــالـة، ونحـرص عـلى تقـديـم حلـول تـتــوافـق مـع متـطلبـات عـملائنـا والأنظمـة القانونية في السعـوديـة، شعـارنـا "نقف بجانبك" يعـكس الـتزامنـا الـعـميـق بـحمـايـة مـصالـحـك ودعـم حـقـوقـك.
+                                </p>
+                            </din>
+                        </div>
+                    </div>
+                    <div >
+                        <img class="img-col" src="./img/col-lg.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why are we  -->
+        <!-- start services  -->
+        <section class="service container mt-5">
+            <h2 class="container-title">خدمـاتنـا القـانونـيـة</h2>
+            <div class="accordion row gap-3" style="--bs-gutter-x: 0;" id="accordionExample">
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            الـتـقــاضــــي وتــســويـــة الـمـنـــازعـــات
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            تـأسيس الشركات في المملكة
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            الاستشارات والدراسات القانونية
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button  class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ترجمة وصياغة العقود ومراجعتها وتسجيلها
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            حماية حقوق الملكية الفكرية
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            التمثيـل القـانـونـي والتـرافـع
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            خـدمـات التـحصيــل
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            الأوقاف والوصايا وتقسيم التركات
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item col-12 col-md-5 col-lg-3">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            إدارة العقارات والمقاولات والأملاك
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>asd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end services  -->
+        <!-- start section booked  -->
+        <section class="booked mt-5">
+            <div class="container">
+                <div class="txt text-center ">
+                    <p class="text-center">خــطــوتــك الأولــــى نحــــو الأمــــــان الـقـــانـــونـــــي تـبـــــدأ هـنــــــا. احجز استشـارتـك للحصول على إرشادات قانونية موثوقة تضمن معالجة قضاياك بأعــلــى درجــات الـدقــة والكـفــاءة.
+                    </p>
+                    <a href="" class="text-decoration-none text-dark border rounded px-4 py-1   ">احجز استشارتك الآن</a>
+                </div>
+            </div>
+        </section>
+        <!-- start section booked  -->
+        <!-- start partener success  -->
+        <section class="partener mt-5 ">
+            <div class="container">
+                <div >
+                    <h2 class="container-title">
+                        شركاء النجاح
+                    </h2>
+                </div>
+                <div class="responsive-customs mt-5">
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                    <div class="p-2">
+                        <div class="image-container d-flex justify-content-center align-items-center">
+                            <h3>asd</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end partener success  -->
+            <!-- start footer  -->
+    <footer id="footer" class="footer  pb-0 px-0 py-md-5 ">
+        <div class="container ">
+            <div class="row justify-content-between ">
+                <article class="px-0  mb-md-0 mb-5">
+                    <div class="mb-4">
+                        <img src="./img/logo.svg" width="72px" alt="" data-attr="logo">
+                    </div>
+                    <div class="icons-conect d-flex flex-wrap flex- md-column gap-2">
+                        
+                            <a href="https://wa.me/966502252450" target="_blank"><img src="./img/Social Icons-1.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-1"></a>
+                            <a href="https://x.com/manilawsa" target="_blank"><img src="./img/Social Icons-2.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-2"></a>
+                            <a href="https://www.linkedin.com/company/mani-lawsa/?viewAsMember=true" target="_blank"><img src="./img/Social Icons-3.svg" width="30px" class="mb-md-2 ms-1 mx-md-0  " alt="photo" data-attr="social-icon-3"></a>
+                            <a href="https://www.facebook.com/mani.lawsa" target="_blank"><img src="./img/Social Icons-5.svg" width="30px" class=" ms-1 mx-md-0  " alt="photo" data-attr="social-icon-5"></a>
+                            <a href="https://www.instagram.com/manilawsa?igsh=MXI1MWR0bDhscHhueQ==" target="_blank"><img src="./img/Social Icons-7.svg" width="30px" class=" ms-1 mx-md-0  " alt="photo" data-attr="social-icon-7"></a>
+                            <a href="https://www.tiktok.com/@mani.lawsa" target="_blank"><img src="./img/Social Icons-4.svg" width="30px" class="" alt="photo" data-attr="social-icon-4"></a>
+                        
+                </article>
+                <article class="px-0 " id="quick-links">
+                    <h4 class="mb-4" data-attr="quick-links-title">روابط سريعة</h4>
+                    <div class="mb-4 d-flex flex-column gap-3 ">
+                        <a href="#home" class="text-decoration-none mb-3" data-attr="link-home"><p class="mb-3">الرئيسية</p></a>
+                        <a href="#about" class="text-decoration-none mb-3 " data-attr="link-about"><p class="mb-3">من نحن</p></a>
+                        <a href="#services" class="text-decoration-none mb-3 " data-attr="link-services"><p class="mb-3">الخدمات</p></a>
+                        <a href="#customs" class="text-decoration-none mb-3 " data-attr="link-customers"><p class="mb-3">العملاء</p></a>
+                        <a href="#footer" class="text-decoration-none mb-3 " data-attr="link-contact"><p class="mb-0">تواصل معنا</p></a>
+                    </div>
+                </article>
+                <article class="px-0  mb-md-0 mb-5">
+                    <h4 class="mb-4" data-attr="contact-info-title">معلومات الاتصال</h4>
+                    <div class="d-flex flex-column gap-3  ">
+                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                            <img src="./img/location icon.svg" alt="" data-attr="location-icon">
+                            <p class="m-0" data-attr="location-text">الـــــرياض - الخبــــــر - جــــــــدة</p>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                            <img src="./img/phone icon.svg" alt="" data-attr="phone-icon">
+                            <a href="https://wa.me/966502252450" class="text-decoration-none" target="_blank" data-attr="phone-link">
+                                <p dir="ltr" class="m-0" data-attr="phone-text">+966 50 225 2450</p>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                            <img src="./img/email icon.svg" alt="" data-attr="email-icon">
+                            <a href="mailto:manilaw@mani-law.com" target="_blank" class="text-decoration-none" >
+                                <p class="m-0" data-attr="email-text">manilaw@mani-law.com</p>
+                            </a>
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3 mb-3">
+                            <img src="./img/globe.svg" alt="" data-attr="website-icon">
+                            <a href="https://www.mani-law.com/" target="_blank" class="text-decoration-none"><p class="m-0" data-attr="website-text">www.mani-law.com</p></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="w-100 d-flex justify-content-center  px-0  ">
+                    <div class="px-0" style="width: 100%; height: 1px; background-color: #ffffff;"></div>
+            </div>
+            <div class="w-100 d-flex justify-content-center">
+                    <div class="row txts align-items-center justify-content-between py-4" style="width: 100%;">
+                        <p id="copyright" class="txt-p mb-0 col-md-5 col-lg-5 p-0" data-attr="copyright">كل الحقوق محفوظة &copy; 2024</p>
+                        <p id="developedBy" class="txt-p mb-0 col-md-5 col-lg-5 p-0" >
+                            Developed by
+                            <a href="https://www.linkedin.com/company/brillianttrend/" target="_blank" class="fw-bold">
+                                    Brilliant Trend
+                            </a>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer  -->
+
+<div style="height: 50vh;"></div>
+
+
     <!-- bootstrap link js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    <!-- EXTERNAL FILE js  -->
+    <!-- cdn js file  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js" integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="./JS/main.js"></script>
 </body>
 </html>
