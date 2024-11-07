@@ -8,33 +8,10 @@
 }
 /* global style for titles */
 /* ************************************************************************************** */
-/* lg screen  */
-@media (min-width: 992px) {
-    .container-title{
-        font-size: 39px;
-        font-weight: 700;
-        padding: 5px;
-        border-right: 4px solid #2F2B73
-    }
-}
-
-/* md screen  */
-@media (min-width: 768px) and (max-width: 992px){
-    .container-title{
-        font-size: 22px;
-        font-weight: 700;
-        padding: 5px;
-        border-right: 4px solid #2F2B73
-    }
-}
-/* sm screen  */
-@media (max-width: 768px){
-    .container-title{
-        font-size: 12px;
-        font-weight: 700;
-        padding: 5px;
-        border-right: 4px solid #2F2B73
-    }
+.container-title{
+    border-right: 4px solid #2F2B73;
+    padding-right: 10px;
+    color: #2F2B73;
 }
 /* ************************************************************************************** */
 
@@ -43,14 +20,33 @@ html{
     overflow-x: hidden;
 }
 body{
-    background-color: #a5a5a5;
+    /* background-color: #a5a5a5; */
     /* height: 1000vh; */
 }
 /* start header  */
-
+.header .sign-up{
+    display: block;
+    width: 217px;
+    color: #2F2B73 !important;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #2F2B73 !important;
+}
 .navbar{
     background-color: #ffffff;
 }
+.navbar .collapse .nav-item a{
+    color: #2F2B73;
+    font-size: 25px;
+    font-weight: 400;
+}
+.offcanvas .nav-item a{
+    color: #2F2B73 !important;
+    font-size: 25px;
+    font-weight: 400;
+}
+
 /* lg screen  */
 @media (min-width: 992px) {
     .header .register-md, .logo-md{
@@ -60,6 +56,17 @@ body{
 
 /* md screen  */
 @media (min-width: 768px) and (max-width: 992px){
+    .navbar-light .navbar-toggler-icon{
+        background-image: url(../img/menu-md.svg);
+    }
+    .navbar-light .navbar-toggler{
+        border: none;
+        padding: 0;
+    }
+    .header .sign-up{
+        width: 164px;
+        font-size: 14px;
+    }
     .header .container .navbar-brand{
         display: none ;
     }
@@ -72,6 +79,18 @@ body{
 }
 /* sm screen  */
 @media (max-width: 768px){
+    .navbar-light .navbar-toggler-icon{
+        background-image: url(../img/menu-sm.svg);
+    }
+    .navbar-light .navbar-toggler{
+        border: none;
+        padding: 0;
+    }
+    .header .sign-up{
+        width: 103px;
+        font-size: 12px;
+        padding: .25rem !important;
+    }
     .header .container .navbar-brand{
         display: none ;
     }
@@ -105,10 +124,22 @@ body{
 .hero .content .hero-title{
     font-size: 48px;
     font-weight: 700;
+    color: white;
 }
 .hero .content .hero-subtitle{
     font-size: 96px;
     font-weight: 700;
+    color: #2F2B73;
+}
+.hero .bttn{
+    background-color: #2F2B73;
+    color: white !important;
+    font-size: 20px;
+    font-weight: 700;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hero .hero-info{
     position: absolute;
@@ -153,6 +184,11 @@ body{
         width: 100%;
         margin-top: 68px;
     }
+    .hero .bttn{
+        background-color: #2F2B73;
+        font-size: 14px;
+        width: 156px;
+    }
     .hero .content{
         height: 360px;
     }
@@ -187,6 +223,12 @@ body{
         height:183px;
         width: 100% ;
         margin-top: 68px;
+    }
+    .hero .bttn{
+        font-size: 12px;
+        width: 112.56px;
+        padding-left: .25rem !important;
+        padding-right: .25rem !important;
     }
     .hero .content{
         height: 183px;
@@ -235,6 +277,19 @@ body{
     height: 501px;
     background: #EFF1FF;
 }
+
+.about .container-title{
+    font-size: 39px;
+    font-weight: 700;
+}
+.about .bttn{
+    width: 270px;
+    background-color: #2F2B73;
+    color: white !important;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+}
 .about .container-about{
     height: 437px;
 }
@@ -256,6 +311,18 @@ body{
 @media (min-width: 768px) and (max-width: 992px){
     .about{
         height: 338px;
+    }
+    .about .container-title{
+        font-size: 22px;
+        font-weight: 700;
+    }
+    .about .bttn{
+        width: 160px;
+        background-color: #2F2B73;
+        color: white !important;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
     }
     .about .container{
         height: 324px;
@@ -285,8 +352,18 @@ body{
         margin-top: 4rem;
         height: 206px;
     }
-    .about .container{
-        /* height: 192px; */
+    .about .container-title{
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .about .bttn{
+        width: 120px;
+        background-color: #2F2B73;
+        color: white !important;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: .25rem !important;
     }
     .about .container-about{
         height: 187px;
@@ -310,10 +387,14 @@ body{
 /* end about  */
 /* start why are we  */
 .why{
-    background-color: #EFF1FF;
-    /* height: 530px; */
-    /* overflow: hidden; */
+    background-color: white;
+    padding: 2rem 0;
 }
+.why .container-title{
+    font-size: 39px;
+    font-weight: 700;
+}
+
 .why h4{
     font-size: 31px;
     font-weight: 500;
@@ -332,8 +413,9 @@ body{
     .why{
         height: 750px;
     }
-    .why h2{
+    .why .container-title{
         font-size: 31px;
+        font-weight: 700;
     }
     .why h4{
         font-size: 25px;
@@ -359,8 +441,9 @@ body{
         height: 690px;
         overflow: hidden;
     }
-    .why h2{
+    .about .container-title{
         font-size: 28px;
+        font-weight: 700;
     }
     .why h4{
         font-size: 20px;
@@ -390,6 +473,21 @@ body{
 }
 /* end why are we  */
 /* start service  */
+.service .accordion .accordion-item{
+    border-radius: 15px;
+    border: none;
+}
+.service .accordion .accordion-item button{
+    border-radius: 15px;
+    background-color: #ECECF7;
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+.service .container-title{
+    font-size: 39px;
+    font-weight: 700;
+}
 .service .col-lg-3{
     width: 32% !important;
 }
@@ -398,9 +496,14 @@ body{
 }
 
 .service button{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     text-align: right;
+}
+.service .arrow{
+    color: #2F2B73;
+    font-size: 16px;
+    font-weight: 700;
 }
 /* md screen  */
 @media (min-width: 768px) and (max-width: 992px){
@@ -408,10 +511,10 @@ body{
         width: 48% !important;
     }
     .service .container-title{
-        font-size: 31px !important;
+        font-size: 31px ;
     }
     .service button{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 /* sm screen  */
@@ -420,28 +523,50 @@ body{
         width: 100% !important;
     }
     .service .container-title{
-        font-size: 28px!important;
+        font-size: 28px;
     }
     .service button{
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 /* end service  */
 /* start section booked  */
-
 .booked{
     background: linear-gradient(180deg, #312E75 0%, #736FC4 100%);
-    height: 260px;
+    /* height: 260px; */
+    height: 350px;
+    background-image: url(../img/احجز\ استشارتك.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.booked .bttn{
+    display: block;
+    width: 270px;
+    background-color: #2F2B73;
+    color: white !important;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
 }
 .booked .txt p{
     font-size: 39px;
     font-weight: 700;
     line-height: 62px;
+    color: white;
 }
 /* md screen  */
 @media (min-width: 768px) and (max-width: 992px){
     .booked{
-        height: 190px;
+        height: 265px;
+        /* height: 190px; */
+    }
+    .booked .bttn{
+        width: 197px;
+        background-color: #2F2B73;
+        color: white !important;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
     }
     .booked .txt p{
         font-size: 26px;
@@ -451,7 +576,18 @@ body{
 /* sm screen  */
 @media (max-width: 768px){
     .booked{
-        height: 130px;
+        height: 145px;
+        padding: 1rem 0 !important;
+        /* height: 130px; */
+    }
+    .booked .bttn{
+        width: 135px;
+        background-color: #2F2B73;
+        color: white !important;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: .25rem !important;
     }
     .booked .txt p{
         font-size: 14px;
@@ -481,73 +617,73 @@ body{
 }
 /* end partener section  */
 /* start footer  */
-@media (max-width: 768px) {
-    #footer{
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
+.footer{
+    color: white;
+    height: 495px;
+    background-color: #1C1A4E;
+}
+.footer .footer-logo{
+    width: 93.1px;
+}
+.footer a{
+    color: white;
+}
+.footer .footer-comunication .icons{
+    width: 170px;
+}
+.footer .footer-comunication .icons img{
+    width: 40px;
+}
+.footer .background{
+    transform: translate(-50% , -50%);
+}
+.footer .background img{
+    width: 440px;
+}
+.footer .line{
+    margin-top: 3rem;  
+    height: 1px; 
+    background-color: #ffffff; 
+    position: relative;
+}
+/* md screen  */
+@media (min-width: 768px) and (max-width: 992px){
+    .footer{
+        height: 485px;
+    }
+    .footer .footer-logo{
+        width: 80px;
+    }
+    .footer .background img{
+        width: 396px;
+    }
+    .footer .line{
+        margin-top: 2rem;  
     }
 }
-footer {
-    background-image: url(./img/footerlg.svg);
-    background-size: cover;
-    color: #fff;
-    padding: 20px;
-}
-@media (max-width: 767px) {
-    footer{
-        background-image: url(./img/footersm.svg);
-        background-size: cover;
-        color: #fff;
+/* sm screen  */
+@media (max-width: 768px){
+    .footer{
+        height: 925px;
     }
-    .footer .icons-conect{
-        width: 100%;
+    .footer .footer-logo{
+        width: 80px;
     }
-}
-.footer .icons-conect{
-    width: 125px;
-}
-@media (max-width: 767px) {
-    footer .row #quick-links{
-        display: none;
+    .footer .background img{
+        width: 313px;
     }
-    .footer .icons-conect{
-        width: 100%;
+    .footer .content{
+        padding-top: 2rem !important;
+        flex-direction: column;
     }
-}
-footer a {
-    color: #ffffff;
-}
-footer a:hover {
-    color: #ffffff;
-}
-footer #quick-links a:hover {
-    text-decoration: underline !important;
-}
-.footer .row article{
-    width: 30%;
-}
-.footer .row .txt-p{
-    width: 50% ;
-}
-@media (max-width: 992px) {
-    .footer .row article{
-        width: 33%;
+    .footer .footer-comunication .icons{
+        width: 320px;
     }
-}
-@media (max-width: 768px) {
-    .footer .row article{
-        width: 100%;
-        
+    .footer .footer-comunication .icons img{
+        width: 32px;
     }
-    .footer .row .txt-p{
-        width: 50% ;
-    
-    }
-}
-@media (max-width: 500px) {
-    .footer .txts p{
-        width: 100% !important;
-        text-align: center !important;
+    .footer .rights{
+        flex-direction: column;
     }
 }
 /* end footer  */
