@@ -67,6 +67,9 @@ html{
     .hero #container-word-div{
         width: 665px;
     }
+    .hero .container-word h2{
+        font-size: 31px;
+    }
     .hero .container-word p{
         font-size: 25px;
     }
@@ -88,6 +91,9 @@ html{
     }
     .hero #container-word-div{
         width: 100%;
+    }
+    .hero .container-word h2{
+        font-size: 25px;
     }
     .hero .container-word p{
         font-size: 15px;
